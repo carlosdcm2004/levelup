@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<script src="app.js" defer></script>
+</head>
+<body onload="initAdminDashboard()">
+
+<header class="header">
+  <div class="header-top">
+    <div class="logo">Level-Up Admin</div>
+    <nav class="nav" id="mainNav">
+      <a href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2>Panel de Administración</h2>
+
+  <!-- FILTRO Y BÚSQUEDA -->
+  <div class="filtros">
+    <select id="filtroCategoria" onchange="aplicarFiltroAdmin()">
+      <option value="">Todas las categorías</option>
+      <option value="Juegos de Mesa">Juegos de Mesa</option>
+      <option value="Accesorios">Accesorios</option>
+      <option value="Consolas">Consolas</option>
+      <option value="Computadores Gamers">Computadores Gamers</option>
+      <option value="Sillas Gamers">Sillas Gamers</option>
+      <option value="Mouse">Mouse</option>
+      <option value="Mousepad">Mousepad</option>
+      <option value="Poleras Personalizadas">Poleras Personalizadas</option>
+    </select>
+    <input type="text" id="busqueda" placeholder="Buscar..." oninput="aplicarFiltroAdmin()">
+  </div>
+
+  <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
+  <div class="admin-form">
+    <h3>Agregar nuevo producto</h3>
+    <input type="text" id="nuevoNombre" placeholder="Nombre del producto">
+    <input type="number" id="nuevoPrecio" placeholder="Precio">
+    <input type="text" id="nuevaCategoria" placeholder="Categoría">
+    <input type="text" id="nuevaImagen" placeholder="URL de la imagen">
+    <input type="text" id="nuevaDescripcion" placeholder="Descripción">
+    <button class="btn" onclick="agregarProductoAdmin()">Agregar Producto</button>
+  </div>
+
+  <!-- LISTA DE PRODUCTOS -->
+  <h3>Productos</h3>
+  <div id="productosAdmin" class="productos-grid"></div>
+
+  <!-- LISTA DE USUARIOS -->
+  <h3>Usuarios Registrados</h3>
+  <div id="usuariosAdmin"></div>
+</main>
+
+<footer class="footer">
+  &copy; 2025 Level-Up Admin
+</footer>
+
+</body>
+</html>
+

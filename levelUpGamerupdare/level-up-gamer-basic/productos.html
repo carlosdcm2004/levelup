@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Productos - Level-Up Gamer</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body onload="mostrarUsuario(); mostrarAdminNav(); mostrarProductos();">
+
+<header class="header">
+  <div class="header-top">
+    <h1 class="logo">Level-Up Gamer</h1>
+    <p id="usuarioActual"></p>
+    <button onclick="logoutUsuario()" class="btn">Cerrar Sesión</button>
+  </div>
+  <nav class="nav" id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="blog1.html">Blog</a>
+    <a href="nosotros.html">Nosotros</a>
+    <!-- Panel de admin aparece solo si es admin -->
+  </nav>
+</header>
+
+<main>
+<section class="productos-destacados">
+  <h2>Todos los Productos</h2>
+  <div class="filtros">
+    <select id="filtroCategoria" onchange="aplicarFiltro()">
+      <option value="">Todas las categorías</option>
+      <option value="Juegos de Mesa">Juegos de Mesa</option>
+      <option value="Accesorios">Accesorios</option>
+      <option value="Consolas">Consolas</option>
+      <option value="Computadores Gamers">Computadores Gamers</option>
+      <option value="Sillas Gamers">Sillas Gamers</option>
+      <option value="Mouse">Mouse</option>
+      <option value="Mousepad">Mousepad</option>
+      <option value="Poleras Personalizadas">Poleras Personalizadas</option>
+      <option value="Polerones Gamers Personalizados">Polerones Gamers Personalizados</option>
+    </select>
+    <input type="text" id="busqueda" placeholder="Buscar productos..." onkeyup="aplicarFiltro()">
+  </div>
+  <div id="productos" class="productos-grid"></div>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

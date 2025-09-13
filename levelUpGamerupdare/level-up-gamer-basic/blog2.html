@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Blog 1 - Level-Up Gamer</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body onload="mostrarUsuario(); mostrarAdminNav();">
+
+<header class="header">
+  <div class="header-top">
+    <h1 class="logo">Level-Up Gamer</h1>
+    <p id="usuarioActual"></p>
+    <button onclick="logoutUsuario()" class="btn">Cerrar Sesión</button>
+  </div>
+  <nav class="nav" id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="blog1.html">accesorios</a>
+    <a href="blog2.html">probando accesorios</a>
+    <a href="blog3.html">perifericos</a>
+  </nav>
+</header>
+
+<main>
+<section class="productos-destacados">
+  <h2>Top accesorios para gamers</h2>
+  <!-- Video de YouTube embebido -->
+  <div style="width:100%; margin-bottom:20px; border-radius:15px; overflow:hidden;">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/wJg9LuIsamA" 
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen style="border-radius:15px;">
+    </iframe>
+  </div>
+  <p style="color:#D3D3D3;">Explora los mejores accesorios gamer para maximizar tu rendimiento en los juegos.</p>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

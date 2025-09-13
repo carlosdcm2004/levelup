@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registro - Level-Up Gamer</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <h1 class="logo">Level-Up Gamer</h1>
+  </div>
+  <nav class="nav" id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<main>
+<section class="productos-destacados">
+  <h2>Registro</h2>
+  <form id="formRegistro" onsubmit="registrarUsuario(event)">
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button class="btn" type="submit">Registrarse</button>
+  </form>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
